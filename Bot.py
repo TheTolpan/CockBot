@@ -23,7 +23,7 @@ async def add_huso(ctx, *args):
     if isinstance(slur, str) and len(slur) < 140:
         hus_responses.append(slur)
         # persistent save
-        with open('huso-data.txt', 'w') as fp:
+        with open('huso-data.txt', 'a') as fp:
             fp.write(slur + '\n')
         await ctx.send(f'{ctx.author} added new huso: {slur}')
     else:
