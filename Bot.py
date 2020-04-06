@@ -20,4 +20,4 @@ async def huso(ctx):
                  'Selbst Dobos Mutter würde dich von der Bettkante schupsen.']
     await ctx.send(f'{random.choice(responses)}')
 
-client.run('Njk2NjgzMjQ0NDUxNjU5Nzg2.XosYkw.8SggqPoQ7O23gLnmdt2I5E0MmNE')
+client.run('')
