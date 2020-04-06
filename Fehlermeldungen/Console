@@ -1,0 +1,45 @@
+Ignoring exception in command huso:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 83, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "Bot2.py", line 18, in huso
+    await ctx.send(f'{random.choice(huso_repsonses)}')
+  File "/usr/local/lib/python3.7/dist-packages/discord/abc.py", line 856, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/dist-packages/discord/http.py", line 225, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/bot.py", line 892, in invoke
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 797, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 92, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+Ignoring exception in command huso:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 83, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "Bot2.py", line 18, in huso
+    await ctx.send(f'{random.choice(huso_repsonses)}')
+  File "/usr/local/lib/python3.7/dist-packages/discord/abc.py", line 856, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/dist-packages/discord/http.py", line 225, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/bot.py", line 892, in invoke
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 797, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/discord/ext/commands/core.py", line 92, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+^Cjanis@PandaBox:~/Entwicklung/Discord_Bot$ 
