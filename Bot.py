@@ -3,7 +3,7 @@ import random
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '.')
-huso_repsonses = []
+hus_responses = []
 
 @client.event
 async def on_ready():
@@ -15,12 +15,13 @@ async def ping(ctx):
 
 @client.command(help='Got cocked!')
 async def huso(ctx):
-    await ctx.send(f'{random.choice(huso_repsonses)}')
+    await ctx.send(f'{random.choice(hus_responses)}')
 
 @client.command(help='Add a nur huso response. Example: .add_huso This is the new huso!')
-async def add_huso(ctx, slur):
+async def add_huso(ctx, *args):
+    slur = " ".join(args)
     if isinstance(slur, str) and len(slur) < 140:
-        huso_repsonses.append(slur)
+        hus_responses.append(slur)
         # persistent save
         with open('huso-data.txt', 'w') as fp:
             fp.write(slur + '\n')
@@ -35,7 +36,7 @@ if __name__ == '__main__':
     with open('huso-data.txt', 'r') as fp:
         for line in fp.readlines():
             if len(line)>0:
-                huso_repsonses.append(line)
+                hus_responses.append(line)
                
     
     client.run('')
